@@ -34,7 +34,8 @@ const language = {
     "GAME_COMPLETE":"La partie est teminé",
     "OBTAINED":"a obtenu",
     "POINTS":"points",
-    "REPLAY":"Rejouer"
+    "REPLAY":"Rejouer",
+    "PLAY":"Jouer"
   },
   "en":{
     "PLAYER_1":"Player 1",
@@ -45,7 +46,8 @@ const language = {
     "GAME_COMPLETE":"Game over",
     "OBTAINED":"obtained",
     "POINTS":"points",
-    "REPLAY":"Replay"
+    "REPLAY":"Replay",
+    "PLAY":"Play"
   },
   "de":{
     "PLAYER_1":"Spieler 1",
@@ -56,7 +58,8 @@ const language = {
     "GAME_COMPLETE":"Spiel vorbei",
     "OBTAINED":"erhaltet",
     "POINTS":"punkte",
-    "REPLAY":"wiedergeben"
+    "REPLAY":"wiedergeben",
+    "PLAY":"Spielen"
   }
 }
 

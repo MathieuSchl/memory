@@ -37,7 +37,12 @@ const language = {
     "OBTAINED":"a obtenu",
     "POINTS":"points",
     "REPLAY":"Rejouer",
-    "PLAY":"Jouer"
+    "PLAY":"Jouer",
+    "EASY":"Facile",
+    "NORMAL":"Normale",
+    "HARD":"Difficile",
+    "CUSTOM":"Personnalisé",
+    "DIFICULTY":"Dificulté :"
   },
   "en":{
     "PLAYER_TURN":"Turn of",
@@ -50,7 +55,12 @@ const language = {
     "OBTAINED":"obtained",
     "POINTS":"points",
     "REPLAY":"Replay",
-    "PLAY":"Play"
+    "PLAY":"Play",
+    "EASY":"Easy",
+    "NORMAL":"Normal",
+    "HARD":"Hard",
+    "CUSTOM":"Custom",
+    "DIFICULTY":"Dificulty :"
   },
   "de":{
     "PLAYER_TURN":"Runde von",
@@ -63,7 +73,12 @@ const language = {
     "OBTAINED":"erhaltet",
     "POINTS":"punkte",
     "REPLAY":"Wiedergeben",
-    "PLAY":"Spielen"
+    "PLAY":"Spielen",
+    "EASY":"Einfach",
+    "NORMAL":"Normal",
+    "HARD":"Hart",
+    "CUSTOM":"Benutzerdefiniert",
+    "DIFICULTY":"Schwierigkeit :"
   }
 }
 
@@ -181,6 +196,7 @@ class Square extends React.Component {
       this.state = {
         selectedLanguage:"fr",
         gameReady:false,
+        dificulty:0,
         height:3,
         width:3,
         cards:[],
@@ -194,7 +210,7 @@ class Square extends React.Component {
       let val = this.state.height*this.state.width;
       if(val%2===1) val--;
       const imgList = this.shuffle(img);
-      for (let i = 0; i < this.state.height*this.state.width/2-1; i++) {
+      for (let i = 0; i < val/2; i++) {
         const squareData={
           value:i,
           img:imgList[i],
@@ -316,7 +332,7 @@ class Square extends React.Component {
       let val = this.state.height*this.state.width;
       if(val%2===1) val--;
       const imgList = this.shuffle(img);
-      for (let i = 0; i < newState.height*newState.width/2-1; i++) {
+      for (let i = 0; i < val/2; i++) {
         const squareData={
           value:i,
           img:imgList[i],
@@ -441,18 +457,56 @@ class Square extends React.Component {
       return newState;
   });
   }
-
+  
   showLanguage(){
     const element = [];
     const lang = Object.keys(language);
     for (let index = 0; index < lang.length; index++) {
       const thelang = lang[index];
-      element.push(<button key={index} style={{margin:"5px"}} onClick={()=>{this.changeLanguage(thelang);}}>{thelang}</button>)
+      element.push(<button key={index}  style={{marginLeft:"10px"}} onClick={()=>{this.changeLanguage(thelang);}}>{thelang}</button>)
     }
     return element;
   }
 
 
+  setDifficulty(dif){
+    this.setState((prev,props)=>{
+      const newState=Object.assign({},prev);
+      newState.dificulty=dif;
+      if(dif===0){
+        newState.height = 3;
+        newState.width = 3;
+      }
+      else if(dif===1){
+        newState.height = 4;
+        newState.width = 4;
+      }
+      else if(dif===2){
+        newState.height = 5;
+        newState.width = 5;
+      }
+      else if(dif===3){
+        // A custom level?
+      }
+      return newState;
+  });
+  }
+
+  getDifficulty(){
+    const dif = this.state.dificulty
+    const res = dif===0 ? this.getText("EASY") : dif===1 ? this.getText("NORMAL") : dif===2 ? this.getText("HARD") :  dif===3 ? this.getText("CUSTOM") : "ERROR"
+    return res;
+  }
+
+  showDifficulties(){
+    const element = [];
+    element.push(<div key={0} style={{margin:"5px"}}>{`${this.getText("DIFICULTY")}`}</div>)
+    element.push(<button key={1} style={{margin:"5px",display:"inline-block"}} onClick={()=>{this.setDifficulty(0);}}>{`${this.getText("EASY")}`}</button>)
+    element.push(<button key={2} style={{margin:"5px",display:"inline-block"}} onClick={()=>{this.setDifficulty(1);}}>{`${this.getText("NORMAL")}`}</button>)
+    element.push(<button key={3} style={{margin:"5px",display:"inline-block"}} onClick={()=>{this.setDifficulty(2);}}>{`${this.getText("HARD")}`}</button>)
+    element.push(<div key={4} style={{margin:"5px",display:"inline-block"}}>{`${this.getDifficulty()}`}</div>)
+    return element;
+  }
 
 
 
@@ -470,7 +524,7 @@ class Square extends React.Component {
     //render in board
 
     render() {
-      const style={position: "fixed", top: "40%", left: "50%", transform: "translate(-50%, -50%)"};
+      const style={position: "fixed", top: "40%", left: "50%", transform: "translate(-50%, -50%)",border:"solid"};
       const textCenter={textAlign: "center"}
       if(this.state.gameReady){
         return (
@@ -484,8 +538,10 @@ class Square extends React.Component {
       }else{
       return (
         <div style={style}>
-          <button style={{transform: "translate(-50%, -50%)",padding:"5px"}} onClick={()=>{this.lunchGame();}}>{`${this.getText("PLAY")}`}</button>
-          <div style={{transform: "translate(-50%, -50%)"}}>{this.showLanguage()}</div>
+          <div><div>{this.showDifficulties()}</div></div>
+          <div><div>{this.showDifficulties()}</div></div>
+          <div><button style={{marginLeft:"72px",marginTop:"10px"}} onClick={()=>{this.lunchGame();}}>{`${this.getText("PLAY")}`}</button></div>
+          <div><div style={{marginLeft:"35px",marginTop:"30px"}}>{this.showLanguage()}</div></div>
         </div>
       );  
       }

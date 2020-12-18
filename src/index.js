@@ -58,7 +58,7 @@ const language = {
     "GAME_COMPLETE":"Spiel vorbei",
     "OBTAINED":"erhaltet",
     "POINTS":"punkte",
-    "REPLAY":"wiedergeben",
+    "REPLAY":"Wiedergeben",
     "PLAY":"Spielen"
   }
 }
@@ -387,6 +387,28 @@ class Square extends React.Component {
     }
 
 
+  changeLanguage(language){
+    this.setState((prev,props)=>{
+      const newState=Object.assign({},prev);
+      newState.selectedLanguage = language;
+      return newState;
+  });
+  }
+
+  showLanguage(){
+    const element = [];
+    const lang = Object.keys(language);
+    for (let index = 0; index < lang.length; index++) {
+      const thelang = lang[index];
+      element.push(<button key={index} style={{margin:"5px"}} onClick={()=>{this.changeLanguage(thelang);}}>{thelang}</button>)
+    }
+    return element;
+  }
+
+
+
+
+
 
 
     lunchGame(){
@@ -397,8 +419,6 @@ class Square extends React.Component {
     });
     this.gameFinihed();
     }
-
-
 
     //render in board
 
@@ -416,7 +436,8 @@ class Square extends React.Component {
       }else{
       return (
         <div style={style}>
-          <button onClick={()=>{this.lunchGame();}}>{`${this.getText("PLAY")}`}</button>
+          <button style={{transform: "translate(-50%, -50%)",padding:"5px"}} onClick={()=>{this.lunchGame();}}>{`${this.getText("PLAY")}`}</button>
+          <div style={{transform: "translate(-50%, -50%)"}}>{this.showLanguage()}</div>
         </div>
       );  
       }
@@ -453,3 +474,5 @@ class Square extends React.Component {
     document.getElementById('root')
   );
   
+
+  // Link : https://stwmemory.herokuapp.com/

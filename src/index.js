@@ -27,6 +27,7 @@ const img=["https://popfr.fr/wp-content/uploads/2019/01/clone-Commander-Cody.jpg
 
 const language = {
   "fr":{
+    "PLAYER_TURN":"Au tour de",
     "PLAYER_1":"Joueur 1",
     "PLAYER_2":"Joueur 2",
     "THE_PLAYER_1":"le joueur 1",
@@ -39,6 +40,7 @@ const language = {
     "PLAY":"Jouer"
   },
   "en":{
+    "PLAYER_TURN":"Turn of",
     "PLAYER_1":"Player 1",
     "PLAYER_2":"Player 2",
     "THE_PLAYER_1":"the player 1",
@@ -51,6 +53,7 @@ const language = {
     "PLAY":"Play"
   },
   "de":{
+    "PLAYER_TURN":"Runde von",
     "PLAYER_1":"Spieler 1",
     "PLAYER_2":"Spieler 2",
     "THE_PLAYER_1":"der Spieler 1",
@@ -472,6 +475,7 @@ class Square extends React.Component {
       if(this.state.gameReady){
         return (
           <div style={style}>
+            <div style={textCenter}><p>{`${this.getText("PLAYER_TURN")}  : ${this.getText("PLAYER_"+(this.state.playerTurn+1))}`}</p></div>
             <div style={textCenter}>{`${this.getText("PLAYER_1")}: ${this.state.score[0]}        ${this.getText("PLAYER_2")}: ${this.state.score[1]}`}</div>
             <div style={textCenter}>{this.renderCollums()}</div>
             <div style={textCenter}>{this.getWinner()}</div>

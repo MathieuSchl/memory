@@ -8,7 +8,8 @@ const img=["https://popfr.fr/wp-content/uploads/2019/01/clone-Commander-Cody.jpg
 "https://pbs.twimg.com/profile_images/952276551642570753/BaCwx0vv_400x400.jpg",
 "https://media.melty.fr/article-4185644-so/media.jpg",
 "https://i.pinimg.com/originals/4b/ec/c6/4becc62770ea547b22251a95e1b80d19.jpg",
-"https://img1.yeggi.com/images_q/3375936/stl-files-of-b1-battle-droid%E2-%E2-%E2-from-star-wars-franchise-model",
+"https://images-na.ssl-images-amazon.com/images/I/71SYsDHWHpL._AC_SX569_.jpg",
+"https://i.pinimg.com/originals/f2/49/ea/f249ea94a8475f6e6683bc3a8ef6c3f5.jpg",
 "https://www.nicepng.com/png/detail/348-3484648_b2-droid-super-battle-droid.png",
 "https://static.wikia.nocookie.net/frstarwars/images/a/a1/Droideka.png",
 "data:image/jpeg;base64,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",
@@ -105,11 +106,20 @@ class Square extends React.Component {
 
 
 
+  async botIsPlaying(action){
+    action.setPlayerCanPlay(false);
+    await sleep(1000);
+    this.buttonClick(action.getRandomCard(),action,false);
+    await sleep(1000);
+    this.buttonClick(action.getRandomCard(),action,false);
+    await sleep(3000);
+    action.setPlayerCanPlay(true);
+  }
 
 
   //Actions in square
-  async buttonClick(card,action){
-    if(!action.getPlayerCanPlay()) return;
+  async buttonClick(card,action,isPlayer){
+    if(isPlayer&&!action.getPlayerCanPlay()) return;
     if(!card.hidden) return;
     card.hidden=false;
     action.updateCard(card);
@@ -119,17 +129,24 @@ class Square extends React.Component {
 
     if(prevCard.value===card.value){
       action.changePlayerScore(3,false);
+      if(!action.gameEndend()) if(action.getPlayer2IsBot()) this.botIsPlaying(action);
     }else{
       action.changePlayerScore(-1,true);
 
-      action.setPlayerCanPlay(false);
-      await sleep(2000);
-      action.setPlayerCanPlay(true);
+      if(isPlayer){
+        action.setPlayerCanPlay(false);
+        await sleep(2000);
+        action.setPlayerCanPlay(true);
+      }else{
+        await sleep(2000);
+      }
 
       prevCard.hidden=true;
       action.updateCard(prevCard);
       card.hidden=true;
       action.updateCard(card);
+
+      if(action.getPlayer2IsBot()) this.botIsPlaying(action);
     }
   }
 
@@ -146,7 +163,7 @@ class Square extends React.Component {
     const style = {cursor: this.props.boardState.hidden ? this.props.action.getPlayerCanPlay() ? "pointer" : "default" : "default"};
     return (
       <button className="square" style={style} onClick={()=>{
-        this.buttonClick(this.props.boardState,this.props.action);
+        this.buttonClick(this.props.boardState,this.props.action,true);
       } }>
       {this.ifShowImage(this.props.boardState.hidden,this.props.boardState.img,this["_reactInternals"].key)}
       </button>
@@ -167,7 +184,8 @@ class Square extends React.Component {
         playerCanPlay:true,
         playerTurn:0,
         previous:null,
-        score:[0,0]
+        score:[0,0],
+        player2Bot:true
       }
       
       let val = this.state.height*this.state.width;
@@ -262,12 +280,30 @@ class Square extends React.Component {
       return text;
     }
 
+    getPlayer2IsBot(){
+      const res = this.state.player2Bot&&this.state.playerTurn===1;
+      return res
+    }
+
+    between(min, max) {  
+      return Math.floor(
+        Math.random() * (max - min) + min
+      )
+    }
+    // Thanks https://futurestud.io/tutorials/generate-a-random-number-in-range-with-javascript-node-js#:~:text=random()%20to%20generate%20a,round%20the%20number%20with%20Math.
+
+    getRandomCard(){
+      const card = this.state.cards[this.between(0, this.state.cards.length)];
+      return card.hidden ? card : this.getRandomCard();
+    }
+
 
 
     gameFinihed(){
      this.setState((prev,props)=>{
       const newState=Object.assign({},prev);
       newState.playerTurn=0;
+      newState.bot=true;
       newState.gameReady=true;
       newState.playerCanPlay=true;
       newState.previous=null;
@@ -309,7 +345,8 @@ class Square extends React.Component {
     });
     }
 
-    getWinner(){
+
+    gameEndend(){
       let gameCompleted = true;
       for (let index = 0; index < this.state.cards.length; index++) {
         const element = this.state.cards[index];
@@ -318,7 +355,11 @@ class Square extends React.Component {
           break;
         }
       }
-      if(!gameCompleted) return;
+      return gameCompleted;
+    }
+
+    getWinner(){
+      if(!this.gameEndend()) return;
       const winner = (this.state.score[0]>this.state.score[1]) ? this.getText("PLAYER_1") : this.getText("PLAYER_2");
       return <div>
               <p>{`${this.getText("GAME_COMPLETE")}`}</p>
@@ -355,7 +396,10 @@ class Square extends React.Component {
         getPreviousCard:((card)=>{return this.getPreviousCard(card)}),
         changePlayerScore:((points,changePlayer)=>{return this.changePlayerScore(points,changePlayer)}),
         getPlayerCanPlay:(()=>{return this.getPlayerCanPlay()}),
-        setPlayerCanPlay:((playerCanPlay)=>{return this.setPlayerCanPlay(playerCanPlay)})
+        setPlayerCanPlay:((playerCanPlay)=>{return this.setPlayerCanPlay(playerCanPlay)}),
+        getPlayer2IsBot:(()=>{return this.getPlayer2IsBot()}),
+        getRandomCard:(()=>{return this.getRandomCard()}),
+        gameEndend:(()=>{return this.gameEndend()})
       }
       return <Square key={i} boardState={this.state.cards[i]} action={action}/>;
     }

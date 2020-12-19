@@ -29,7 +29,11 @@ const img=["https://popfr.fr/wp-content/uploads/2019/01/clone-Commander-Cody.jpg
 "https://cdn-s-www.lalsace.fr/images/1B17A436-42E0-43F3-8CD1-5A1A232C45F1/NW_detail_M/photo-capture-d-ecran-youtube-1606638864.jpg",
 "https://images-na.ssl-images-amazon.com/images/I/816GwN-k8AL._AC_SL1500_.jpg",
 "https://i.ebayimg.com/images/g/OP8AAOSwaANcsapP/s-l300.jpg",
-"https://www.shin-sekai.fr/15086-large_default/star-wars-figurine-death-trooper-premium.jpg"]
+"https://www.shin-sekai.fr/15086-large_default/star-wars-figurine-death-trooper-premium.jpg",
+"https://static.wikia.nocookie.net/starwars/images/3/3f/C-3PO_TLJ_Card_Trader_Award_Card.png/revision/latest/top-crop/width/360/height/360?cb=20180121052644",
+"https://static.fnac-static.com/multimedia/Images/B6/B6/8B/A6/10914742-1505-1540-1/tsp20190131154503/Star-Wars-R2-D2-Droid-40x50-cm-AFFICHE-POSTER.jpg",
+"https://gal.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fgal.2F2017.2F12.2F13.2F5a809119-811c-43ae-938a-db6df82f7e97.2Ejpeg/480x480/quality/80/star-wars-la-princesse-leia-le-cote-obscur-de-carrie-fisher.jpg",
+"https://ixxidesign.azureedge.net/media/1045219/01-Han-Solo.jpg?width=562"]
 
 
 const language = {
@@ -217,7 +221,7 @@ class Square extends React.Component {
         playerTurn:0,
         previous:null,
         score:[0,0],
-        player2Bot:true
+        player2Bot:false
       }
       
       let val = this.state.height*this.state.width;
